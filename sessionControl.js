@@ -84,7 +84,7 @@ window.addEventListener('beforeunload', () => {
       "logout": "Yes"
     });
 
-    navigator.sendBeacon('https://tt1.test2.cc/dtr/kbrestapitest.php', data);
+    navigator.sendBeacon('https://nrfsi.intalk.cc/dtr/kbrestapitest.php', data);
   });
 
 // Mock form submission
