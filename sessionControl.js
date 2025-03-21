@@ -78,19 +78,14 @@ async function logoutUser() {
 }
 
 // Handle logout on tab close using sendBeacon
-window.addEventListener('beforeunload', (event) => {
-  if (!isLoggedOut) {
-    isLoggedOut = true; // Set the flag to true
+window.addEventListener('beforeunload', () => {
     const data = JSON.stringify({
-      "username": "PP112444",
+      "username": "AT112444",
       "logout": "Yes"
     });
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = new URL('https://nrfsi.intalk.cc/dtr/kbrestapitest.php');
-    url.searchParams.append('Authorization', 'Bearer KBAG456123'); // Correct authorization format
-    navigator.sendBeacon(url, blob);
-  }
-});
+
+    navigator.sendBeacon('https://tt1.test2.cc/dtr/kbrestapitest.php', data);
+  });
 
 // Mock form submission
 function submitForm() {
